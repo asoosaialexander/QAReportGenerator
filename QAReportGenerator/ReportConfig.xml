@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Configuration>
+  <User>
+    <Token>
+      81482182a8d7eeb9d86985e4b1e844a7eb83cc3e
+    </Token>
+  </User>
+  <Projects>
+    <Project>
+      <Team>CodeOnMyMind</Team>
+      <Repository>FamilyTree</Repository>
+      <Branch>master</Branch>
+    </Project>
+    <Project>
+      <Team>CodeOnMyMind</Team>
+      <Repository>FamilyTreeApi</Repository>
+      <Branch>master</Branch>
+    </Project>
+  </Projects>
+</Configuration>
