@@ -2,17 +2,23 @@ using System.IO;
 using System.Net;
 using System.Net.Mail;
 using System.Net.Mime;
+using Microsoft.Extensions.Configuration;
 using SmtpClient = System.Net.Mail.SmtpClient;
 
 namespace QAReportGenerator
 {
     public static class EmailClient
     {
+        private static IConfigurationRoot config;
+        static EmailClient()
+        {
+            config = Program.configurationRoot;
+        }
         public static void SendMail(string attachmentFileName)
         {
-            var fromAddress = new MailAddress("sample@gmail.com", "Sample");
-            var toAddress = new MailAddress("sample@hotmail.com", "Sample");
-            const string fromPassword = "password";
+            var fromAddress = new MailAddress(config["Email:FromAddress"], config["Email:FromName"]);
+            var toAddress = new MailAddress(config["Email:ToAddress"], config["Email:ToName"]);
+            string fromPassword = config["EmailPassword"];
 
             var smtp = new SmtpClient
             {

@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Projects>
+  <Project>
+    <Team>CodeOnMyMind</Team>
+    <Repository>FamilyTree</Repository>
+    <Branch>master</Branch>
+  </Project>
+  <Project>
+    <Team>CodeOnMyMind</Team>
+    <Repository>FamilyTreeApi</Repository>
+    <Branch>master</Branch>
+  </Project>
+</Projects>
