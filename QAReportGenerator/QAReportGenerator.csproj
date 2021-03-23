@@ -7,7 +7,6 @@
 
   <ItemGroup>
     <PackageReference Include="ClosedXml" Version="0.95.4" />
-    <PackageReference Include="Mailkit" Version="2.11.1" />
   </ItemGroup>
 
 </Project>

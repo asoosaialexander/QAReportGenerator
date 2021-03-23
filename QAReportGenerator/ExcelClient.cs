@@ -7,7 +7,7 @@ namespace QAReportGenerator
 {
     public static class ExcelClient
     {
-        public static void GenerateReport(List<Project> data)
+        public static string GenerateReport(List<Project> data)
         {
             DataTable dt = new DataTable();
             dt.TableName = "QA Report";
@@ -46,6 +46,8 @@ namespace QAReportGenerator
                 wb.Worksheet("Sonarqube Report").Row(1).Style.Font.Bold = true;
                 wb.SaveAs(fileName);
             }
+
+            return fileName;
         }
     }
 }
