@@ -22,8 +22,8 @@ namespace QAReportGenerator
         }
         public static async Task<List<Project>> GetProjectMetrics(List<Project> projects)
         {
-            var key = config["Token"];
-            var authCredential = Encoding.UTF8.GetBytes(key+":");
+            var token = config["Token"];
+            var authCredential = Encoding.UTF8.GetBytes(token+":");
             httpClient.DefaultRequestHeaders.Authorization =
                     new AuthenticationHeaderValue("Basic", Convert.ToBase64String(authCredential));
             httpClient.BaseAddress = new Uri(config["SonarqubeApi"]);

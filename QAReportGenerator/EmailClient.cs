@@ -43,7 +43,7 @@ namespace QAReportGenerator
             })
             {
                 message.Attachments.Add(attachment);
-                //smtp.Send(message);
+                smtp.Send(message);
             }
 
             if (File.Exists(attachmentFileName))
