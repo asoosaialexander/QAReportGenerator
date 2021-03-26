@@ -16,11 +16,16 @@ namespace QAReportGenerator
         {
             using IHost host = CreateHostBuilder(args).Build();
 
-            // Application code should start here.
+            //Application code should start here.
             var projects = GetProjects();
             projects = SonarqubeClient.GetProjectMetrics(projects).GetAwaiter().GetResult();
-            string fileName = ExcelClient.GenerateReport(projects);
-            EmailClient.SendMail(fileName);
+            var authors = GetAuthors();
+            authors = SonarqubeClient.GetVulnerabilities(authors).GetAwaiter().GetResult();
+            
+            string fileName = ExcelClient.GenerateReport(projects, authors);
+            //EmailClient.SendMail(fileName);
+
+            Console.Write("Task Completed");
 
             await host.RunAsync();
         }
@@ -45,7 +50,6 @@ namespace QAReportGenerator
             {
                 var project = new Project()
                 {
-                    Team = element.Element("Team").Value,
                     Repository = element.Element("Repository").Value,
                     Branch = element.Element("Branch").Value
 
@@ -53,6 +57,25 @@ namespace QAReportGenerator
                 projects.Add(project);
             }
             return projects;
+        }
+
+        static List<Author> GetAuthors()
+        {
+            List<Author> authors = new List<Author>();
+            XElement authorsXml = XElement.Load(@"Authors.xml");
+            IEnumerable<XElement> authorsElement = authorsXml.Elements();
+            foreach (var element in authorsElement)
+            {
+                var author = new Author()
+                {
+                    Team = element.Element("Team").Value,
+                    Name = element.Element("Name").Value,
+                    EmailAddress = element.Element("EmailAddress").Value
+
+                };
+                authors.Add(author);
+            }
+            return authors;
         }
     }
 }
