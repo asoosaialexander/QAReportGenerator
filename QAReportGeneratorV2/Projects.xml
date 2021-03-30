@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Projects>
+  <Project>
+    <Repository>asoosaialexander_FamilyTree</Repository>
+    <Branch>master</Branch>
+  </Project>
+  <Project>
+    <Repository>asoosaialexander_FamilyTreeApi</Repository>
+    <Branch>master</Branch>
+  </Project>
+</Projects>

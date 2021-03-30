@@ -3,9 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30413.136
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QAReportGenerator", "QAReportGenerator\QAReportGenerator.csproj", "{FED4B0CB-A666-4367-A67B-1F79ED44D351}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "QAReportGenerator", "QAReportGenerator\QAReportGenerator.csproj", "{FED4B0CB-A666-4367-A67B-1F79ED44D351}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QAReportConfigTool", "QAReportConfigTool\QAReportConfigTool.csproj", "{8927DD2E-87B2-471B-833F-2046D8020E32}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "QAReportConfigTool", "QAReportConfigTool\QAReportConfigTool.csproj", "{8927DD2E-87B2-471B-833F-2046D8020E32}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QAReportGeneratorV2", "QAReportGeneratorV2\QAReportGeneratorV2.csproj", "{75165820-7B50-4786-B46B-942BB12F4BFD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{8927DD2E-87B2-471B-833F-2046D8020E32}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8927DD2E-87B2-471B-833F-2046D8020E32}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8927DD2E-87B2-471B-833F-2046D8020E32}.Release|Any CPU.Build.0 = Release|Any CPU
+		{75165820-7B50-4786-B46B-942BB12F4BFD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{75165820-7B50-4786-B46B-942BB12F4BFD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{75165820-7B50-4786-B46B-942BB12F4BFD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{75165820-7B50-4786-B46B-942BB12F4BFD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

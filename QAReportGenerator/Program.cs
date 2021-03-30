@@ -23,7 +23,7 @@ namespace QAReportGenerator
             authors = SonarqubeClient.GetVulnerabilities(authors).GetAwaiter().GetResult();
             
             string fileName = ExcelClient.GenerateReport(projects, authors);
-            //EmailClient.SendMail(fileName);
+            EmailClient.SendMail(fileName);
 
             Console.Write("Task Completed");
 
