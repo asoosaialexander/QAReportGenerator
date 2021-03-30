@@ -91,7 +91,7 @@ namespace QAReportGenerator
                 }
             }
 
-            string fileName = "Issues_Report_" + DateTime.Now.ToShortDateString() + ".xlsx";
+            string fileName = "Issues_Report_" + DateTime.Now.ToString("dd_MMM_yyyy") + ".xlsx";
             using (XLWorkbook wb = new XLWorkbook())
             {
                 wb.Worksheets.Add(dt, dt.TableName);

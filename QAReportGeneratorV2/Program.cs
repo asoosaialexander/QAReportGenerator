@@ -12,7 +12,7 @@ namespace QAReportGenerator
     {
         public static IConfigurationRoot configurationRoot;
 
-        static async Task Main(string[] args)
+        static void Main(string[] args)
         {
             using (IHost host = CreateHostBuilder(args).Build())
             {
@@ -27,7 +27,7 @@ namespace QAReportGenerator
 
                 Console.Write("Task Completed");
 
-                await host.RunAsync();
+                host.RunAsync();
             }
         }
 
